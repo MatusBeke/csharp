@@ -61,20 +61,9 @@ var zadanieMeno = Console.ReadLine();
 Console.WriteLine("Zadaj svoje heslo:");
 var zadanieHeslo = Console.ReadLine();
 
-//porovnanie
-var porovnanieMeno = menoPouzivatela == zadanieMeno;
-var porovnanieHeslo = hesloPouzivatela == zadanieHeslo;
-
-var prijatyPristup = porovnanieHeslo && porovnanieMeno;
-
-//vystup
-Console.WriteLine("Meno zhoda: " + porovnanieMeno);
-Console.WriteLine("Heslo zhoda: " + porovnanieHeslo);
-Console.WriteLine("Povoleny pristup: " + prijatyPristup);
-
-if (prijatyPristup)
+if (menoPouzivatela == zadanieMeno && hesloPouzivatela == zadanieHeslo)
 {
-    Console.WriteLine("Heslo sa zhoduje, vitajte.:D " + menoPouzivatela);
+    Console.WriteLine("Heslo sa zhoduje, vitajte.:D pán " + menoPouzivatela);
 }
 else
 {
