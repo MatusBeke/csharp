@@ -6,7 +6,7 @@ bool isAdult = false;
 float accountBallance = 0;
 
 Console.WriteLine(name);
+Console.WriteLine(age)
 Console.WriteLine("First letter of name is: " + firstLetter);
 Console.WriteLine("Ia adult: " + isAdult);
 Console.WriteLine("Account ballance: " + accountBallance);
-Console.WriteLine(age);
