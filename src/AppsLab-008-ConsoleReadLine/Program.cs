@@ -51,17 +51,15 @@ Console.WriteLine();*/
 
 
 
-
-var vysledok = "55" + "10";
-Console.WriteLine(vysledok);
-
 //databazy
 var menoPouzivatela = "MatusBeke";
 var hesloPouzivatela = "123456789";
 
-//Zadanie uzivatelom
-var zadanieMeno = "MatusBeke";
-var zadanieHeslo = "123456789";
+Console.WriteLine("Zadaj svoje meno:");
+var zadanieMeno = Console.ReadLine();
+
+Console.WriteLine("Zadaj svoje heslo:");
+var zadanieHeslo = Console.ReadLine();
 
 //porovnanie
 var porovnanieMeno = menoPouzivatela == zadanieMeno;
@@ -80,5 +78,5 @@ if (prijatyPristup)
 }
 else
 {
-    Console.WriteLine("Vase heslo nie je spravne. :C");
+    Console.WriteLine("Vase heslo nie je spravne.:C");
 }
