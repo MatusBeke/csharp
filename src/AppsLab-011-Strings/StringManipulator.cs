@@ -1,4 +1,6 @@
-﻿namespace AppsLab_011_Strings;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace AppsLab_011_Strings;
 
 /// <summary>
 /// Provides methods for manipulating strings.
@@ -23,7 +25,7 @@ public class StringManipulator
     /// <returns>The uppercase string.</returns>
     public string ConvertToUpper(string input)
     {
-       input = input.ToUpper(); 
+        input = input.ToUpper();
         return input;
     }
 
@@ -47,9 +49,14 @@ public class StringManipulator
     public bool ContainsSubstring(string input, string substring)
     {
         if (input.Contains(substring))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-
-
     /// <summary>
     /// Determines if a string starts with a substring.
     /// </summary>
@@ -58,6 +65,13 @@ public class StringManipulator
     /// <returns>True if the string starts with the substring, false otherwise.</returns>
     public bool StartsWithSubstring(string input, string substring)
     {
-        throw new NotImplementedException();
+        if (input.StartsWith(substring))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
