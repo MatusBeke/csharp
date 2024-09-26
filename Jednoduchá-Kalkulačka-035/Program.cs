@@ -51,11 +51,15 @@ namespace MyApp
                     Console.WriteLine(number1final + number2final);
                     break;
                 case "/":
-                    if (number2final == 0) {
+                    if (number2final == 0)
+                    {
                         Console.WriteLine("Neda sa delit nulou!");
                     }
-                    Console.WriteLine(number1final + number2final);
-                    break;
+                    else
+                    {
+                        Console.WriteLine(number1final / number2final);
+                    }
+                    break;          
             }
         }
     }
