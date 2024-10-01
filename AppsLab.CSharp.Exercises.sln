@@ -95,9 +95,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppsLab-034-Debug", "src\Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jednoduchá-Kalkulačka-035", "Jednoduchá-Kalkulačka-035\Jednoduchá-Kalkulačka-035.csproj", "{123CA6BE-7DB1-47FD-9EA3-D153473DC983}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cvicenie_List", "Cvicenie_List\Cvicenie_List.csproj", "{B6727D18-843B-41F1-82C3-B691768BEECC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cvicenie_List", "Cvicenie_List\Cvicenie_List.csproj", "{B6727D18-843B-41F1-82C3-B691768BEECC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cvicenie_Cikly", "Cvicenie_Cikly\Cvicenie_Cikly.csproj", "{E85A080D-70F0-4564-97B5-BB9E51E5F87A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cvicenie_Cykly", "Cvicenie_Cikly\Cvicenie_Cykly.csproj", "{E85A080D-70F0-4564-97B5-BB9E51E5F87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uloha zoznam", "uloha zoznam\uloha zoznam.csproj", "{AC678210-7AEA-4703-9F4D-FCDC6F921E59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -661,6 +663,18 @@ Global
 		{E85A080D-70F0-4564-97B5-BB9E51E5F87A}.Release|x64.Build.0 = Release|Any CPU
 		{E85A080D-70F0-4564-97B5-BB9E51E5F87A}.Release|x86.ActiveCfg = Release|Any CPU
 		{E85A080D-70F0-4564-97B5-BB9E51E5F87A}.Release|x86.Build.0 = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|x64.Build.0 = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Debug|x86.Build.0 = Debug|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|x64.Build.0 = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -712,6 +726,7 @@ Global
 		{123CA6BE-7DB1-47FD-9EA3-D153473DC983} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{B6727D18-843B-41F1-82C3-B691768BEECC} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 		{E85A080D-70F0-4564-97B5-BB9E51E5F87A} = {56555FB0-B513-49EF-9002-A5AF135EA090}
+		{AC678210-7AEA-4703-9F4D-FCDC6F921E59} = {56555FB0-B513-49EF-9002-A5AF135EA090}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC0775DE-E3B9-459A-BEA7-309013FDC6CA}
