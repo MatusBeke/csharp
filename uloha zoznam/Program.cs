@@ -21,11 +21,14 @@ namespace MyApp
                 else
                 {
                     Console.Clear();
-                    menaList.Add(Meno);
                     Console.WriteLine("Mena v zozname:");
-                    foreach
                     menaList.Add(Meno);
-                    
+                    foreach(string mena  in menaList)
+                    {
+                        Console.WriteLine(mena);
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("Zadajte meno:");
                 }
             }
         }
