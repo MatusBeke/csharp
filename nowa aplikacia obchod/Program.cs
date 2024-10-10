@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Mail;
 
 namespace MyApp
 {
@@ -6,6 +7,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             List<string> store = new List<string>();
 
             bool isEnd = false; 
@@ -45,7 +47,32 @@ namespace MyApp
 
         public static void AddItem(List<string> itemlist, string itemName, int itemCount)
         {
-            itemlist.Add(itemName);
+            string foundItem = null;
+            foreach (var item in itemlist)
+            {
+                if (item.Contains(itemName))
+                {
+                    foundItem = item;
+                }
+            }
+
+            if (foundItem != null)
+            {
+                var newCreatedItem = $"{itemName} || {itemCount}";
+                itemlist.Add(newCreatedItem);
+                Console.WriteLine($"Predmet {itemName.ToUpper()} bol pridany do obchodu");
+            }
+            else
+            {
+                var splittedItem = foundItem.Split("||");
+                var foundItemName = splittedItem;
+                var foundItemCount = Int32.Parse(splittedItem[1]);
+                var newItemCount = foundItemCount + itemCount;
+
+                var indexOfItem = foundItem.IndexOf(foundItem);
+                itemlist[indexOfItem] = $"{itemName}||{newItemCount}";
+                Console.WriteLine($"Predmet {itemName.ToUpper()} bol zaktualizovany do obchodu");
+            }
         }
 
         public static void PrintMenu()
