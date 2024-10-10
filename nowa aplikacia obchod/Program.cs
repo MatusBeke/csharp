@@ -23,6 +23,8 @@ namespace MyApp
                         {
                             Console.WriteLine(item);    
                         }
+                        Console.WriteLine("Zadaj hociaky znak a ENTER pre vymazanie konzoly!");
+                        Console.ReadLine();
                         break;
 
 
@@ -56,16 +58,16 @@ namespace MyApp
                 }
             }
 
-            if (foundItem != null)
+            if (foundItem == null)
             {
-                var newCreatedItem = $"{itemName} || {itemCount}";
+                var newCreatedItem = $"{itemName}||{itemCount}";
                 itemlist.Add(newCreatedItem);
                 Console.WriteLine($"Predmet {itemName.ToUpper()} bol pridany do obchodu");
             }
             else
             {
                 var splittedItem = foundItem.Split("||");
-                var foundItemName = splittedItem;
+                var foundItemName = splittedItem[0];
                 var foundItemCount = Int32.Parse(splittedItem[1]);
                 var newItemCount = foundItemCount + itemCount;
 
