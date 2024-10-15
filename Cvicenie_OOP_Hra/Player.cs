@@ -32,6 +32,13 @@ namespace Cvicenie_OOP_Hra
             int AttackOfCurrentPlayer = this.AttackPower;
             int HPofEnemyAfterFight = HPofEnemy - AttackOfCurrentPlayer;
             player.HP = HPofEnemyAfterFight;
+
+        }
+        public void HealPlayer(Player player)
+        {
+            int ManaOfPlayer = this.Mana;
+            int HPofPlayerPlusMana = this.HP + player.Mana;
+            this.HP = HPofPlayerPlusMana;
         }
     }
 }
