@@ -16,6 +16,9 @@
             int Result = rectangle.Calculate();
             Console.WriteLine("Obsah obdlznika je: " + Result);
 
+            Rectangle SecondRrectangle = new Rectangle(rectangle.Width * 10, rectangle.Height * 10);
+            int SecondResult = SecondRrectangle.Calculate();
+            Console.WriteLine(SecondResult);
         }
     }
 }
