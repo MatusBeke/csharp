@@ -17,27 +17,28 @@ namespace obcan_a_mesto
 
         }
 
-        public Mesto(string nazovMesta, List<Obcan> ObcaniaList)
+        public Mesto(string nazovMesta)
         {
             NazovMesta = nazovMesta;
-            this.obcaniaList = ObcaniaList;
+            this.obcaniaList = new List<Obcan>();
 
         }
-       /* public void PridajObcana (Obcan obcaniaList)
-        {
-            Console.WriteLine("Zadaj meno a vek obcana: ");
-            var Name = Console.ReadLine();
-            int Age = Int32.Parse(Console.ReadLine());
 
 
-        }*/
+       public void PridajObcana (Obcan  obcan)
+        { 
+            obcaniaList.Add(obcan);
+        }
 
         public void VypisObcanov()
         {
+
             foreach (var obcan in obcaniaList)
             {
-                Console.WriteLine(obcan);
-            }            
+                obcan.VypisInfo();
+
+            }        
+            Console.WriteLine("");
         }
     }
 }

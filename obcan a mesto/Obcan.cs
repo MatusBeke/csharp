@@ -24,7 +24,7 @@ namespace obcan_a_mesto
 
         public void VypisInfo() 
         {
-            Console.WriteLine("Meno: " + Name + "Vek: " + Age);
+            Console.WriteLine("Meno: " + Name + " Vek: " + Age);
 
 
         }
