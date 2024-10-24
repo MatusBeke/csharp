@@ -8,12 +8,17 @@ namespace obcan_a_mesto
 {
     public class Lekar
     {
-        public List <Obcan> zamestnanci { get; set; }
+       public string Meno { get; set; }
+       public int vek { get; set;}
 
-        public Lekar()
+        public Lekar(string meno, int vek) 
         {
-
+            Meno = meno;
+            vek = vek;
         }
-
+        public void VypisInfo()
+        {
+            Console.WriteLine("Meno" + Meno + ", Vek " + vek + ", lieci sople." );
+        }
     }
 }
