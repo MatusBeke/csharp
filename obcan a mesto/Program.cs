@@ -16,7 +16,7 @@
             Programator ProgrameZBratislavee = new Programator("Matus",555);
             ucitel UcitelZblavy = new ucitel("Gadzo", 33);
 
-            Lekar LekarsKosic = new Lekar("Zelezotrhac", 159);
+            Lekar LekarsKosic = new Lekar("Zelezotrhac", 26);
             Programator ProgrameZKosic = new Programator("Matuzalem", 956);
             ucitel UcitelKosice = new ucitel("Izak", 38);
 

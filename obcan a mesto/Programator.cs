@@ -11,6 +11,11 @@ namespace obcan_a_mesto
        public string Meno { get; set; }
         public int vek { get; set; }
 
+        public Programator()
+        {
+
+        }
+
         public Programator(string meno, int vek)
         {
             Meno = meno;
