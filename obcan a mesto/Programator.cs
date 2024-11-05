@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace obcan_a_mesto
 {
-   class Programator : Obcan
+   public class Programator : Obcan
     {
-        public Programator(string name, int age) : base(name, age){ }
-        public void VypisInfo()
+        public string programovaciJazyk { get; set; }
+       
+
+        public Programator(string name, int age, string programovaciJazyk) : base(name, age)
+        { 
+            this.programovaciJazyk = programovaciJazyk;
+        }
+        public override void VypisInfo()
         {
-            Console.WriteLine("Meno" + Name + ", Vek " + Age + ", pise kodik.");
+            Console.WriteLine("Meno" + Name + ", Vek " + Age + ", pise kodiky v jazyku" + programovaciJazyk);
         }
     }
 }

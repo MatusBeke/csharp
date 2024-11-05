@@ -22,9 +22,9 @@ namespace obcan_a_mesto
 
         }
 
-        public void VypisInfo() 
+        public virtual void VypisInfo() 
         {
-            Console.WriteLine("Meno: " + Name);
+            Console.WriteLine("Meno: " + Name + ", vek: " + Age);
         }
         public void VypisVek() 
         {

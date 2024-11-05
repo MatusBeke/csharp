@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Obcan Jakub = new Obcan("Jakub", 15);
+           /* Obcan Jakub = new Obcan("Jakub", 15);
             Obcan Matus = new Obcan("Matus", 16);
             Obcan Fero = new Obcan("Fero" , 25);
 
@@ -18,22 +18,46 @@
 
             Lekar LekarsKosic = new Lekar("Zelezotrhac", 26);
             Programator ProgrameZKosic = new Programator("Matuzalem", 956);
-            ucitel UcitelKosice = new ucitel("Izak", 38);
+            ucitel UcitelKosice = new ucitel("Izak", 38);*/
 
             Mesto Bratislava = new Mesto("Bratislava");
-            Bratislava.PridajObcana(Jakub);
+           /* Bratislava.PridajObcana(Jakub);
             Bratislava.PridajObcana(Matus);
-            Bratislava.PridajObcana(Fero);
+            Bratislava.PridajObcana(Fero);*/
 
             Mesto Kosice = new Mesto("Kosice");
-            Kosice.PridajObcana(Tono);
-            Kosice.PridajObcana(Juro);
-            Kosice.PridajObcana(Niko);
+            /* Kosice.PridajObcana(Tono);
+             Kosice.PridajObcana(Juro);
+             Kosice.PridajObcana(Niko);*/
+           
+            while (Bratislava.obcaniaList.Count < 31) 
+            {
+                Obcan o = GeneratorObcan.GenerujObcana();
+                Bratislava.obcaniaList.Add(o);
+            }
 
-            Console.WriteLine("Obcania BL:");
+            for (int i = 0; i < 31; i++)
+            {
+                Obcan o = GeneratorObcan.GenerujObcana();
+                Bratislava.PridajObcana(o);
+            }
+            for (int i = 0;i < 10; i++)
+            {
+                Programator p = GeneratorObcan.GenerujProgramatora();
+                Bratislava.PridajObcana(p);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                Programator p = GeneratorObcan.GenerujProgramatora();
+                Kosice.PridajObcana(p);
+            }
+
+                Console.WriteLine("Obcania BL:");
             Bratislava.VypisObcanov();
             Console.WriteLine("Obcania KE:");
             Kosice.VypisObcanov();
+
+
         }
     }
 }

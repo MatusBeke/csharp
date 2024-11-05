@@ -11,8 +11,6 @@ namespace obcan_a_mesto
     {
         public string NazovMesta { get; set; }
         public List<Obcan> obcaniaList { get; set; }
-     
-
 
         public Mesto()
         {
@@ -26,23 +24,18 @@ namespace obcan_a_mesto
         
         }
 
-
-
-        public void PridajObcana (Obcan  obcan)
+        public virtual void PridajObcana (Obcan  obcan)
         { 
             obcaniaList.Add(obcan);
         }
 
-        public void VypisObcanov()
+        public virtual void VypisObcanov()
         {
 
             foreach (var obcan in obcaniaList)
             {
                 obcan.VypisInfo();
-
             }
-
-
             Console.WriteLine("");
         }
     }
