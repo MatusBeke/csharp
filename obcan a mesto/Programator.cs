@@ -6,24 +6,12 @@ using System.Threading.Tasks;
 
 namespace obcan_a_mesto
 {
-    internal class Programator
+   class Programator : Obcan
     {
-       public string Meno { get; set; }
-        public int vek { get; set; }
-
-        public Programator()
-        {
-
-        }
-
-        public Programator(string meno, int vek)
-        {
-            Meno = meno;
-            vek = vek;
-        }
+        public Programator(string name, int age) : base(name, age){ }
         public void VypisInfo()
         {
-            Console.WriteLine("Meno" + Meno + ", Vek " + vek + ", pise kodik.");
+            Console.WriteLine("Meno" + Name + ", Vek " + Age + ", pise kodik.");
         }
     }
 }

@@ -6,25 +6,13 @@ using System.Threading.Tasks;
 
 namespace obcan_a_mesto
 {
-    internal class ucitel
+    class ucitel : Obcan
     {
-    
-       public string Meno { get; set; }
-        public int vek { get; set; }
-
-        public ucitel()
-        {
-
-        }
-
-        public ucitel(string meno, int vek)
-        {
-            Meno = meno;
-            vek = vek;
-        }
+    public ucitel(string name, int age) : base(name, age){ }
+ 
         public void VypisInfo()
         {
-            Console.WriteLine("Meno" + Meno + ", Vek " + vek + ",sere dzeci.");
+            Console.WriteLine("Meno" + Name + ", Vek " + Age + ",sere dzeci.");
         }
     }
 }

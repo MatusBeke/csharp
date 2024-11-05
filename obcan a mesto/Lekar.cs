@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace obcan_a_mesto
 {
-    public class Lekar
+    public class Lekar : Obcan
     {
-       public string Meno { get; set; }
-       public int vek { get; set;}
-
-        public Lekar(string meno, int vek) 
+        public Lekar(string name, int age) : base(name, age){ }
+        public new void VypisInfo()
         {
-            Meno = meno;
-            vek = vek;
-        }
-        public void VypisInfo()
-        {
-            Console.WriteLine("Meno" + Meno + ", Vek " + vek + ", lieci sople." );
+            Console.WriteLine(Name + ", " + Age + ", lieci sople." );
         }
     }
 }

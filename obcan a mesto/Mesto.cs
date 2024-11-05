@@ -11,9 +11,7 @@ namespace obcan_a_mesto
     {
         public string NazovMesta { get; set; }
         public List<Obcan> obcaniaList { get; set; }
-        public List<Lekar> ListLekarov { get; set; }
-        public List<Programator> listProgramatorov { get; set; }
-        public List<ucitel> uciteliaList { get; set; }  
+     
 
 
         public Mesto()
@@ -25,24 +23,9 @@ namespace obcan_a_mesto
         {
             NazovMesta = nazovMesta;
             this.obcaniaList = new List<Obcan>();
-            this.ListLekarov = new List<Lekar>();
-            this.uciteliaList = new List<ucitel>();
-            this.listProgramatorov = new List<Programator>();
+        
         }
 
-        public void PridajLekara (Lekar lekar)
-        {
-            ListLekarov.Add(lekar);
-        }
-
-        public void PridajProgramatora(Programator programator)
-        {
-            listProgramatorov.Add(programator);
-        }
-        public void PridajUcitela(ucitel ucitel)
-        {
-            uciteliaList.Add(ucitel);
-        }
 
 
         public void PridajObcana (Obcan  obcan)
@@ -57,7 +40,9 @@ namespace obcan_a_mesto
             {
                 obcan.VypisInfo();
 
-            }        
+            }
+
+
             Console.WriteLine("");
         }
     }
