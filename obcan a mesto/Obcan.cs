@@ -8,27 +8,56 @@ namespace obcan_a_mesto
 {
     public class Obcan
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        protected string name;
+        protected int age;
+        protected StavObcana stav;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public StavObcana Stav
+        {
+            get { return stav; }
+            set { stav = value; }
+        }
 
         public Obcan(string name, int age)
         {
-            Name = name;
-            Age = age;
+            this.name = name;
+            this.age = age;
         }
 
         public Obcan()
         {
-
         }
 
         public virtual void VypisInfo() 
         {
-            Console.WriteLine("Meno: " + Name + ", vek: " + Age);
+            Console.WriteLine("Meno: " + Name + ", vek: " + Age + " ,Stav: " + stav);
         }
         public void VypisVek() 
         {
             Console.WriteLine("Vek: " + Age);
         }
     }
+
+    public enum StavObcana
+    {
+        
+        KamiKadze,
+        Terorista,
+        Turista
+    }
 }
+
+
+

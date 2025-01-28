@@ -9,7 +9,7 @@ namespace obcan_a_mesto
     public static class GeneratorObcan
     {
         private static string[] mena = { "Igor", "Anna", "Peter", "Jana", "Martin", "Lucia", "Tomáš", "Eva", "Michal", "Zuzana", "Marek", "Katarína", "Andrej", "Lenka", "Patrik", "Monika", "Filip", "Veronika", "Richard", "Simona", "Róbert", "Mária", "Jakub", "Barbora", "Adam", "Dominika", "Lukáš", "Daniela", "Vladimír", "Nikola" };
-        public static string[] programovacieJazyky = { "C", "C+", "C++", "Python", "C#", "Java", "JavaScript", "HTML", "Ruby", "F#", "CSS", "LuaU", "Brainfuck", "MOO" };
+        private static string[] programovacieJazyky = { "C", "C+", "C++", "Python", "C#", "Java", "JavaScript", "HTML", "Ruby", "F#", "CSS", "LuaU", "Brainfuck", "MOO" };
         public static Obcan GenerujObcana()
         {
             Random random = new Random();  
@@ -18,6 +18,9 @@ namespace obcan_a_mesto
             string meno = mena[pozicia];
             int vek = random.Next(15, 115);
             Obcan obcan = new Obcan(meno, vek);
+            int dlzkaEnum = (Enum.GetValues<StavObcana>().Length);
+            int nahodnyIndex = random.Next(dlzkaEnum);
+            obcan.Stav = (StavObcana)nahodnyIndex;
             return obcan;
 
 

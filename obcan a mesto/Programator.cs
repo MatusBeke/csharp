@@ -17,7 +17,11 @@ namespace obcan_a_mesto
         }
         public override void VypisInfo()
         {
-            Console.WriteLine("Meno" + Name + ", Vek " + Age + ", pise kodiky v jazyku" + programovaciJazyk);
+            Console.WriteLine("Meno" + Name + ", Vek " + Age + ", pise kodiky v jazyku" + programovaciJazyk + " ,Stav: " + stav);
+        }
+
+        public Programator()
+        {
         }
     }
 }

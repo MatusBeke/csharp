@@ -8,12 +8,17 @@ namespace obcan_a_mesto
 {
     class ucitel : Obcan
     {
-    public ucitel(string name, int age) : base(name, age){ }
+        public ucitel()
+        {
+        }
+
+        private ucitel(string name, int age) : base(name, age){ }
  
         public void VypisInfo()
         {
-            Console.WriteLine("Meno" + Name + ", Vek " + Age + ",sere dzeci.");
+            Console.WriteLine("Meno" + Name + ", Vek " + Age + ",sere dzeci." + " ,Stav: " + stav);
         }
+
     }
 }
 

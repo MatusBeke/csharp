@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace obcan_a_mesto
 {
+
     public class Lekar : Obcan
     {
-        public Lekar(string name, int age) : base(name, age){ }
-        public new void VypisInfo()
+        public Lekar()
         {
-            Console.WriteLine(Name + ", " + Age + ", lieci sople." );
         }
+
+        private Lekar(string name, int age) : base(name, age){ }
+        public new void VypisInfo()
+
+        {
+            Console.WriteLine(Name + ", " + Age + ", lieci sople." + " ,Stav: " + stav);
+        }
+
     }
 }
