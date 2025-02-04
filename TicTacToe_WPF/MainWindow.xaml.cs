@@ -20,6 +20,7 @@ namespace TicTacToe_WPF
         public char PlayerOne { get; set; } = '✕';
         public char PlayerTwo { get; set; } = '⚪';
         
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -46,8 +47,27 @@ namespace TicTacToe_WPF
            var isWinner = CheckWinner();
            if (isWinner)
            {
-               MessageBox.Show("Vyhral si" + LastPlayer);
-           }
+                var result = MessageBox.Show(messageBoxText: "Vyhral hrac: " + LastPlayer + ", chces pokracovat?",
+                    caption: "Pokravovat v hre",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Button_0x0.Content = "";
+                    Button_0x1.Content = "";
+                    Button_0x2.Content = "";
+                    Button_1x1.Content = "";
+                    Button_1x2.Content = "";
+                    Button_1x3.Content = "";
+                    Button_2x1.Content = "";
+                    Button_2x2.Content = "";
+                    Button_2x3.Content = "";
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
         }
 
 
@@ -68,24 +88,48 @@ namespace TicTacToe_WPF
             var b_22 = Button_2x2.Content.ToString();
             var b_23 = Button_2x3.Content.ToString();
 
-            if (b_00 == b_01 && b_00 == b_02)
+
+
+            if ((b_00 == b_01 && b_01 == b_02) && (b_00 != "" && b_01 != "" && b_02 != ""))
             {
                 return true;
             }
 
-            if (b_11 == b_12 && b_11 == b_13)
+            if ((b_11 == b_12 && b_12 == b_13) && (b_11 != "" && b_12 != "" && b_13 != ""))
             {
                 return true;
             }
 
-            if (b_21 == b_22 && b_21 == b_23)
+            if ((b_21 == b_22 && b_22 == b_23) && (b_21 != "" && b_22 != "" && b_23 != ""))
             {
                 return true;
             }
 
+            if ((b_00 == b_11 && b_11 == b_21) && (b_00 != "" && b_11 != "" && b_21 != ""))
+            {
+                return true;
+            }
+
+            if ((b_01 == b_12 && b_12 == b_22) && (b_01 != "" && b_12 != "" && b_22 != ""))
+            {
+                return true;
+            }
+
+            if ((b_02 == b_13 && b_13 == b_23) && (b_02 != "" && b_13 != "" && b_23 != ""))
+            {
+                return true;
+            }
+
+            if ((b_21 == b_12 && b_12 == b_02) && (b_21 != "" && b_12 != "" && b_02 != ""))
+            {
+                return true;
+            }
+
+            if ((b_23 == b_12 && b_12 == b_00) && (b_23 != "" && b_12 != "" && b_00!= ""))
+            {
+                return true;
+            }
             return false;
-
         }
-
     }
 }
