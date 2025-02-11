@@ -54,7 +54,7 @@ namespace StickmanFight.Windows
                 Label_Pokemon1_HP.Content = "Looser!";
             }
 
-            if(gameEngine.FirstFighter.Healt<= 0 && gameEngine.SecondFighter.Healt <=)
+            if(gameEngine.FirstFighter.Healt<= 0 && gameEngine.SecondFighter.Healt <= 0)
             {
                 Button_LightAttcak.IsEnabled = false;
                 Button_MediumAttack.IsEnabled = false;
