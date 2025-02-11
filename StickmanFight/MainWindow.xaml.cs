@@ -23,9 +23,9 @@ namespace StickmanFight
         {
             InitializeComponent();
 
-            Window_PokemonBattle = new Window_PokemonBattle();
+          /*  Window_PokemonBattle = new Window_PokemonBattle();
             Window_PokemonBattle.Show();
-            this.Close();
+            this.Close();*/
         }
     }
 }

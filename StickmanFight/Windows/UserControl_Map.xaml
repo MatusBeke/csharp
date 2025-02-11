@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="PokemonFight.Windows.UserControl_Map"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PokemonFight.Windows"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="Grid_Map" OpacityMask="#FFEC1B1B" Background="#FFAAC378" Margin="0,10,10,0">
+        <Button Name="Button_Charizard" Content="Charizard" HorizontalAlignment="Left" Height="66" Margin="94,47,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
+        <Button x:Name="Button_Niggatchu" Content="Niggatchu" HorizontalAlignment="Left" Height="66" Margin="155,154,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
+        <Button x:Name="Button_Newtwo" Content="Newtwo" HorizontalAlignment="Left" Height="66" Margin="107,243,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>
