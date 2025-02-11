@@ -7,18 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Image Margin="-19,34,339,0" Source="/Images/niggatchu.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-901.192"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image Margin="159,254,641,180" Source="/Images/pikatchu.png" Stretch="Fill"/>
-        <Image Margin="340,-25,-47,-25" Source="/Images/pikatchu.png" Stretch="Fill"/>
-
+       
     </Grid>
 </Window>

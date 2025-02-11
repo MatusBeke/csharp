@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using StickmanFight.Windows;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -15,10 +16,16 @@ namespace StickmanFight
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+        public Window_PokemonBattle Window_PokemonBattle { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+
+            Window_PokemonBattle = new Window_PokemonBattle();
+            Window_PokemonBattle.Show();
+            this.Close();
         }
     }
 }

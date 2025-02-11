@@ -19,17 +19,17 @@ namespace StickmanFight
         public int Attack1()
         {
             Random random = new Random();
-            return random.Next(10, 91);
+            return random.Next(10, 41);
         }
         public int Attack2()
         {
             Random random = new Random();
-            return random.Next(30, 71);
+            return random.Next(40, 81);
         }
         public int Attack3()
         {
             Random random = new Random();
-            return random.Next(40, 61);
+            return random.Next(80, 95);
         }
 
         public int Heal()
@@ -44,12 +44,22 @@ namespace StickmanFight
                 }
                 else
                 {
-                    healValue += 100;
+                    Healt += healValue;
                 }
             }
 
             return healValue;
         }
 
+        public bool TakeDamage(int damage)
+        {
+            Healt -= damage;
+            if (Healt <= 0)
+            {
+                Healt = 0;
+                return false;
+            }
+            return true;
+        }
     }
 }

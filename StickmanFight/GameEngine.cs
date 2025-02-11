@@ -13,8 +13,8 @@ namespace StickmanFight
 
         public GameEngine()
         {
-            FirstFighter = new Fighter(name: "Pikatchu");
-            SecondFighter = new Fighter(name: "Niggatchu");
+            FirstFighter = new Fighter(name: "Niggatchu");
+            SecondFighter = new Fighter(name: "Pikachu");
         }
     }
 }

@@ -133,7 +133,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Application", "WPF_Appl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe_WPF", "TicTacToe_WPF\TicTacToe_WPF.csproj", "{FE469C37-D4CA-4957-867E-D33DA80421C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StickmanFight", "StickmanFight\StickmanFight.csproj", "{E0EE0087-DFAD-4D16-8A4A-B12EF7CA96B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonFight", "StickmanFight\PokemonFight.csproj", "{E0EE0087-DFAD-4D16-8A4A-B12EF7CA96B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
