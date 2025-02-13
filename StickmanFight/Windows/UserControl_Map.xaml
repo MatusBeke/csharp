@@ -7,9 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid x:Name="Grid_Map" OpacityMask="#FFEC1B1B" Background="#FFAAC378" Margin="0,10,10,0">
-        <Button Name="Button_Charizard" Content="Charizard" HorizontalAlignment="Left" Height="66" Margin="94,47,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
-        <Button x:Name="Button_Niggatchu" Content="Niggatchu" HorizontalAlignment="Left" Height="66" Margin="155,154,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
-        <Button x:Name="Button_Newtwo" Content="Newtwo" HorizontalAlignment="Left" Height="66" Margin="107,243,0,0" VerticalAlignment="Top" Width="198" Background="#FFB7AAAA" FontFamily="Arial Black" FontSize="22" Click="Button_Click"/>
-
+        
     </Grid>
 </UserControl>

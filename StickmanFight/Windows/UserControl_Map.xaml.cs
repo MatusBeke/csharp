@@ -1,4 +1,5 @@
 ﻿using StickmanFight;
+using StickmanFight.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,24 @@ namespace PokemonFight.Windows
     /// </summary>
     public partial class UserControl_Map : UserControl
     {
+        public GameEngine gameEngine { get; set; }
+        public Dictionary<Button, Fighter> Enemies {  get; set; } = new Dictionary<Button, Fighter>();
+
         public UserControl_Map()
         {
             InitializeComponent();
+           
             GenerateMap();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var pokemon = Enemies[button];
+
+            var Window_PokemonBattle = new Window_PokemonBattle(gameEngine);
+            Window_PokemonBattle.Show();
+            
         }
         public void GenerateMap()
         {
@@ -33,21 +48,22 @@ namespace PokemonFight.Windows
 
             for (int i = 0; i < 3; i++)
             {
-                var positionX = rnd.Next(-300, 300);
-                var positionY = rnd.Next(-300, 300);
+                var positionX = rnd.Next(-375, 250);
+                var positionY = rnd.Next(-375, 325);
                 Button button = new Button();
                 button.Width = 100;
                 button.Height = 50;
                 button.Content = "Enemy: " + i;
                 button.Margin = new Thickness(positionX, positionY * i, 0, 0);
+                button.Click += Button_Click;
 
                 Grid_Map.Children.Add(button);
+
+                Fighter pokemon = new Fighter("Enemie: " + i, 200 + (100 * i), i);
+                button.Content = $"{pokemon.name} LVL: {pokemon.Level}";
+                Enemies.Add(button, pokemon);
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

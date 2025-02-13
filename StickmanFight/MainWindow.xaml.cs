@@ -18,14 +18,13 @@ namespace StickmanFight
     public partial class MainWindow : Window
 
     {
+        public GameEngine GameEngine { get; set; }
         public Window_PokemonBattle Window_PokemonBattle { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            UserControl_World.gameEngine = GameEngine;
 
-          /*  Window_PokemonBattle = new Window_PokemonBattle();
-            Window_PokemonBattle.Show();
-            this.Close();*/
         }
     }
 }

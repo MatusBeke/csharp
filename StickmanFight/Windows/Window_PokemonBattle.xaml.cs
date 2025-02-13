@@ -20,22 +20,22 @@ namespace StickmanFight.Windows
     public partial class Window_PokemonBattle : Window
     {
         //Properties
-        public GameEngine gameEngine { get; set; } = new GameEngine();
+        public GameEngine gameEngine { get; set; }
         public List<string> FightLogger {  get; set; } = new List<string>();
-        public Window_PokemonBattle()
+        public Window_PokemonBattle(GameEngine GameEngine)
         {
             InitializeComponent();
-
+            gameEngine = GameEngine;
             RefreshElements();
         }
         //Refresher
         public void RefreshElements()
         {
             ProgressBar_Pokemon1_HP.Value = gameEngine.FirstFighter.Healt;
-            Label_Pokemon1_HP.Content = gameEngine.FirstFighter.Healt + "/100";
+            Label_Pokemon1_HP.Content = gameEngine.FirstFighter.Healt + "/" + gameEngine.FirstFighter.MaxHealth;
 
             ProgressBar_Pokemon2_HP.Value = gameEngine.SecondFighter.Healt;
-            Label_Pokemon2_HP.Content = gameEngine.SecondFighter.Healt + "/100";
+            Label_Pokemon2_HP.Content = gameEngine.SecondFighter.Healt + "/" + gameEngine.SecondFighter.MaxHealth;
 
             ListView_FightLog.Items.Clear();
             foreach(var log in FightLogger)
@@ -217,7 +217,25 @@ namespace StickmanFight.Windows
 ⠀⠀⠀⠀⡿⢿⣿⣿⣿⣿⣿⣿⣇⢠⠐⡁⢰⣿⠿⡷⠀⠹⡙⣶⣄⡀⠀⢠⡄⢀⣾⡿⣟⢣⠟⡼⢫⣿⢿⣿⣿⣿⡿⣿⣷⣏⠂⢜⡱⣌⡄⢣⣝⠂⡉⠒⡁⠀⠀⠂⠐⠈⠀⠠⠀
  
  
+1
+00:00:00,000 --> 00:00:04,900
+[Ob] du meine Arbeit für richtig hältst,
 
+2
+00:00:05,000 --> 00:00:08,990
+ob du glaubst, dass ich fleißig gewesen bin, dass ich gearbeitet habe,
+
+3
+00:00:09,000 --> 00:00:11,900
+dass ich mich in diesen Jahren für dich eingesetzt habe,
+
+4
+00:00:12,000 --> 00:00:16,990
+dass ich anständig meine Zeit verwendet habe im Dienste meines Volkes.
+
+5
+00:00:17,000 --> 00:00:24,000
+Gib du jetzt deine Stimme ab, wenn "JA", dann tritt für mich ein, so wie ich für dich eingetreten bin!
 
 
 
